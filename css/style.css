@@ -431,10 +431,11 @@ a:focus {
   overflow: hidden; /* Hide the scrollbar */
   position: relative;
   padding: 20px 120px; /* Adjust left and right padding */
+  animation: slide-infinite 20s linear infinite;
 }
 
 .project_section .project_container .box {
-  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
+  flex: 0 0 auto;
   width: 150px; /* Adjusted width for smaller logos */
 }
 
@@ -448,6 +449,16 @@ a:focus {
 .project_section .project_container .box img:hover {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
+
+@keyframes slide-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Slide the entire container left */
+  }
+}
+
 
 
 
