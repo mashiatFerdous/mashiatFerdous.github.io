@@ -431,8 +431,7 @@ a:focus {
   overflow: hidden; /* Hide the scrollbar */
   position: relative;
   padding: 20px 100px; /* Adjust left and right padding */
-  width: 100%;
-  animation: slide-infinite 20s linear infinite; /* Apply infinite sliding animation */
+  scroll-behavior: smooth;
 }
 
 .project_section .project_container .box {
@@ -451,14 +450,7 @@ a:focus {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
 
-@keyframes slide-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Slide out the entire container */
-  }
-}
+
 
 
 

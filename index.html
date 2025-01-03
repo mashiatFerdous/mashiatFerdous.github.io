@@ -558,7 +558,27 @@
       }
 
 
+      const container = document.querySelector('.project_container');
+  let scrollAmount = 0;
 
+  function autoSlide() {
+    container.scrollBy({ left: 1, behavior: 'smooth' });
+    scrollAmount += 1;
+
+    // Reset scroll position when it reaches the end
+    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+      scrollAmount = 0;
+      container.scrollTo({ left: 0 });
+    }
+  }
+
+  let slideInterval = setInterval(autoSlide, 20); // Adjust speed
+
+  // Pause on hover
+  container.addEventListener('mouseover', () => clearInterval(slideInterval));
+  container.addEventListener('mouseout', () => {
+    slideInterval = setInterval(autoSlide, 20);
+  });
 
 
     </script>
