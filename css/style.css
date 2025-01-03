@@ -406,6 +406,11 @@ a:focus {
   margin-bottom: 35px;
 }
 
+.about_section .box .detail-box p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 .about_section .box .img-box {
   width: 75%;
   border: 1px dashed #000000;
