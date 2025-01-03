@@ -439,7 +439,7 @@ a:focus {
 
 .project_section .project_container .box {
   flex: 0 0 auto; /* Prevent shrinking and set fixed width */
-  width: 250px; /* Adjust width as per design */
+  width: 150px; /* Adjust width as per design */
   scroll-snap-align: center; /* Align boxes to snap */
 }
 
