@@ -485,21 +485,37 @@ a:focus {
   width: 100%;
 }
 
-.blog_section .box {
-  margin-top: 45px;
+.blog_section .logo-slider-container {
+  overflow: hidden; /* Hide the scrollbar */
+  position: relative;
 }
 
-.blog_section .box .img-box img {
+.blog_section .logo-slider {
+  display: flex;
+  gap: 30px; /* Space between logos */
+  white-space: nowrap;
+  padding: 0 20px; /* Add padding to prevent logos from touching the edges */
+}
+
+.blog_section .logo-slider .box {
+  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
+  width: 200px; /* Adjust width of the logo box */
+}
+
+.blog_section .logo-slider .box .img-box img {
   width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add border-radius */
 }
 
-.blog_section .box .detail-box {
+.blog_section .logo-slider .box .detail-box {
   margin-top: 25px;
 }
 
-.blog_section .box .detail-box h4 {
+.blog_section .logo-slider .box .detail-box h4 {
   font-weight: bold;
 }
+
 
 /* contact section */
 .contact_section {

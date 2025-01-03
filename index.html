@@ -88,7 +88,7 @@
                         <a class="nav-link" href="#logo">Brand Identity</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact us</a>
+                        <a class="nav-link" href="#contact">Contact Me</a>
                       </li>
                     </ul>
                   </div>
@@ -377,85 +377,43 @@
       <hr class="section_hr" />
     </div>
     <!-- blog section -->
-    <section id="logo" class="blog_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            Brand Identity & Logos
-          </h2>
+<section id="logo" class="blog_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Brand Identity & Logos</h2>
+    </div>
+    <div class="logo-slider-container">
+      <div class="logo-slider">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/b1.png" alt="" />
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b1.png" alt="" />
-              </div>
-              <!--<div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>-->
-            </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/b-2.png" alt="" />
           </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-2.png" alt="" />
-              </div>
-             <!---- <div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>-->
-            </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/b-3.png" alt="" />
           </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-3.png" alt="" />
-              </div>
-              <!--<div class="detail-box">
-                <h4>
-                  Readable content of a page
-                </h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem
-                </p>
-              </div>-->
-            </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/b-4.png" alt="" />
           </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/b-4.png" alt="" />
-              </div>
-            </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/p-3.png" alt="" />
           </div>
-          <div class="col-md-4">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/p-3.png" alt="" />
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
-
-    <!-- end blog section -->
+    </div>
+  </div>
+</section>
+<!-- end blog section -->
 
     <!-- contact section -->
 
@@ -463,7 +421,7 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Contact Us
+            Contact Me
           </h2>
         </div>
 
@@ -557,33 +515,61 @@
         document.getElementById("myNav").style.width = "0%";
       }
 
+// Project section script
+const projectContainer = document.querySelector('.project_container');
+let projectScrollAmount = 0;
 
-      const container = document.querySelector('.project_container');
-  let scrollAmount = 0;
+// Duplicate the items to make an infinite loop effect
+const projectItems = projectContainer.children;
+const clonedProjectItems = Array.from(projectItems).map(item => item.cloneNode(true));
+clonedProjectItems.forEach(item => projectContainer.appendChild(item));
 
-  // Duplicate the items to make an infinite loop effect
-  const items = container.children;
-  const clonedItems = Array.from(items).map(item => item.cloneNode(true));
-  clonedItems.forEach(item => container.appendChild(item));
+function projectAutoSlide() {
+  projectContainer.scrollBy({ left: 1, behavior: 'smooth' });
+  projectScrollAmount += 1;
 
-  function autoSlide() {
-    container.scrollBy({ left: 1, behavior: 'smooth' });
-    scrollAmount += 1;
-
-    // Reset scroll position when it reaches the end of the original items
-    if (scrollAmount >= container.scrollWidth / 2) {
-      scrollAmount = 0;
-      container.scrollTo({ left: 0 });
-    }
+  // Reset scroll position when it reaches the end of the original items
+  if (projectScrollAmount >= projectContainer.scrollWidth / 2) {
+    projectScrollAmount = 0;
+    projectContainer.scrollTo({ left: 0 });
   }
+}
 
-  let slideInterval = setInterval(autoSlide, 20); // Adjust speed
+let projectSlideInterval = setInterval(projectAutoSlide, 20); // Adjust speed
 
-  // Pause the auto-slide when hovered
-  container.addEventListener('mouseover', () => clearInterval(slideInterval));
-  container.addEventListener('mouseout', () => {
-    slideInterval = setInterval(autoSlide, 20);
-  });
+// Pause the auto-slide when hovered
+projectContainer.addEventListener('mouseover', () => clearInterval(projectSlideInterval));
+projectContainer.addEventListener('mouseout', () => {
+  projectSlideInterval = setInterval(projectAutoSlide, 20);
+});
+
+// Logo section script
+const logoSlider = document.querySelector('.logo-slider');
+let logoScrollAmount = 0;
+
+// Clone the items to create a continuous loop
+const logoItems = logoSlider.children;
+const clonedLogoItems = Array.from(logoItems).map(item => item.cloneNode(true));
+clonedLogoItems.forEach(item => logoSlider.appendChild(item));
+
+function logoAutoSlide() {
+  logoSlider.scrollBy({ left: 1, behavior: 'smooth' });
+  logoScrollAmount += 1;
+
+  // Reset scroll position when the slider reaches the halfway point (end of the original items)
+  if (logoScrollAmount >= logoSlider.scrollWidth / 2) {
+    logoScrollAmount = 0;
+    logoSlider.scrollTo({ left: 0 });
+  }
+}
+
+let logoSlideInterval = setInterval(logoAutoSlide, 20); // Adjust the speed here
+
+// Pause the auto-slide on hover
+logoSlider.addEventListener('mouseover', () => clearInterval(logoSlideInterval));
+logoSlider.addEventListener('mouseout', () => {
+  logoSlideInterval = setInterval(logoAutoSlide, 20);
+});
 
 
     </script>
