@@ -432,6 +432,7 @@ a:focus {
   position: relative;
   padding: 20px 100px; /* Adjust left and right padding */
   scroll-behavior: smooth;
+  white-space: nowrap; /* Ensure items are on a single line */
 }
 
 .project_section .project_container .box {

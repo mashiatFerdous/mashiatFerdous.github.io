@@ -561,12 +561,17 @@
       const container = document.querySelector('.project_container');
   let scrollAmount = 0;
 
+  // Duplicate the items to make an infinite loop effect
+  const items = container.children;
+  const clonedItems = Array.from(items).map(item => item.cloneNode(true));
+  clonedItems.forEach(item => container.appendChild(item));
+
   function autoSlide() {
     container.scrollBy({ left: 1, behavior: 'smooth' });
     scrollAmount += 1;
 
-    // Reset scroll position when it reaches the end
-    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+    // Reset scroll position when it reaches the end of the original items
+    if (scrollAmount >= container.scrollWidth / 2) {
       scrollAmount = 0;
       container.scrollTo({ left: 0 });
     }
@@ -574,7 +579,7 @@
 
   let slideInterval = setInterval(autoSlide, 20); // Adjust speed
 
-  // Pause on hover
+  // Pause the auto-slide when hovered
   container.addEventListener('mouseover', () => clearInterval(slideInterval));
   container.addEventListener('mouseout', () => {
     slideInterval = setInterval(autoSlide, 20);
