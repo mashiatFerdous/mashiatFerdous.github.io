@@ -426,26 +426,33 @@ a:focus {
 
 
 .project_section .project_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 15px; /* Space between boxes */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Smooth snapping */
+  padding: 20px 0;
+}
+
+.project_section .project_container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a cleaner look */
 }
 
 .project_section .project_container .box {
-  margin: 15px;
-  -ms-flex-preferred-size: 30.70%;
-      flex-basis: 30.70%;
-  min-width: 250px;
+  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
+  width: 250px; /* Adjust width as per design */
+  scroll-snap-align: center; /* Align boxes to snap */
 }
 
 .project_section .project_container .box img {
   width: 100%;
+  border-radius: 10px; /* Optional: Rounded corners for images */
+  transition: transform 0.3s ease;
 }
+
+.project_section .project_container .box img:hover {
+  transform: scale(1.05); /* Optional: Zoom effect on hover */
+}
+
 
 .expand_section {
   background-color: #24263c;
