@@ -430,12 +430,13 @@ a:focus {
   gap: 35px; /* Increased gap between logos */
   overflow: hidden; /* Hide the scrollbar */
   position: relative;
-  padding: 20px 120px; /* Adjust left and right padding */
-  animation: slide-infinite 20s linear infinite;
+  padding: 20px 100px; /* Adjust left and right padding */
+  width: 100%;
+  animation: slide-infinite 20s linear infinite; /* Apply infinite sliding animation */
 }
 
 .project_section .project_container .box {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Prevent shrinking */
   width: 150px; /* Adjusted width for smaller logos */
 }
 
@@ -455,9 +456,10 @@ a:focus {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Slide the entire container left */
+    transform: translateX(-100%); /* Slide out the entire container */
   }
 }
+
 
 
 

@@ -558,14 +558,7 @@
       }
 
 
-  const projectContainer = document.querySelector('.project_container');
 
-  projectContainer.addEventListener('animationiteration', () => {
-    // Reset the position of the container after the animation ends
-    projectContainer.style.animation = 'none'; // Temporarily disable animation
-    projectContainer.offsetHeight; // Trigger a reflow (force browser to recognize the change)
-    projectContainer.style.animation = ''; // Re-enable the animation
-  });
 
 
     </script>
