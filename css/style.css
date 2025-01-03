@@ -427,17 +427,16 @@ a:focus {
 
 .project_section .project_container {
   display: flex;
-  gap: 30px; /* Increased gap between logos */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Smooth snapping */
+  gap: 35px; /* Increased gap between logos */
+  overflow-x: hidden; /* Hide the scrollbar */
+  position: relative;
   padding: 20px 70px; /* Adjust left and right padding */
 }
 
 .project_section .project_container .box {
   flex: 0 0 auto; /* Prevent shrinking and set fixed width */
-  width: 200px; /* Adjusted width for smaller logos */
-  scroll-snap-align: center; /* Align boxes to snap */
-  margin: 0; /* Ensure no extra margins interfere with gap */
+  width: 150px; /* Adjusted width for smaller logos */
+  animation: slide 10s linear infinite; /* Auto-slide animation */
 }
 
 .project_section .project_container .box img {
@@ -449,6 +448,14 @@ a:focus {
 
 .project_section .project_container .box img:hover {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 30px)); /* Slide left continuously */
+  }
 }
 
 
