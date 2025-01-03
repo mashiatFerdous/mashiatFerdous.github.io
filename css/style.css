@@ -430,7 +430,7 @@ a:focus {
   gap: 15px; /* Space between boxes */
   overflow-x: auto; /* Enable horizontal scrolling */
   scroll-snap-type: x mandatory; /* Smooth snapping */
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 
 .project_section .project_container::-webkit-scrollbar {
