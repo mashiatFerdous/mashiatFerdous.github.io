@@ -389,16 +389,9 @@ a:focus {
 }
 
 .about_section .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about_section .box .detail-box {
@@ -422,24 +415,15 @@ a:focus {
 
 .about_section a {
   font-family: 'Raleway', sans-serif;
-  display: inline-block;
   color: #000000;
-  position: relative;
-  background-color: transparent;
+  text-decoration: none;
   font-size: 18px;
 }
 
-.about_section a::after {
-  content: "";
-  width: 35px;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
-  background-color: #000000;
+.about_section a:hover {
+  color: #000000;
 }
+
 
 .project_section .project_container {
   display: -webkit-box;
