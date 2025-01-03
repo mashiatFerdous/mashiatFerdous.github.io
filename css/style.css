@@ -430,7 +430,7 @@ a:focus {
   gap: 35px; /* Increased gap between logos */
   overflow-x: hidden; /* Hide the scrollbar */
   position: relative;
-  padding: 20px 70px; /* Adjust left and right padding */
+  padding: 20px 120px; /* Adjust left and right padding */
 }
 
 .project_section .project_container .box {
