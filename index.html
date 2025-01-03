@@ -556,6 +556,27 @@
       function closeNav() {
         document.getElementById("myNav").style.width = "0%";
       }
+
+
+
+      const projectContainer = document.querySelector('.project_container');
+  const totalWidth = projectContainer.scrollWidth; // Total width of all content
+  const containerWidth = projectContainer.clientWidth; // Width of the visible container
+
+  let currentPosition = 0; // Starting position for translation
+
+  function moveSlide() {
+    // If we reached the end, reset the position to 0
+    if (currentPosition <= -totalWidth) {
+      currentPosition = containerWidth;
+    }
+    
+    currentPosition -= 1; // Move the slide left by 1px each time
+    projectContainer.style.transform = `translateX(${currentPosition}px)`; // Apply translation
+  }
+
+  // Move the slide every 10ms (speed of the animation)
+  setInterval(moveSlide, 10);
     </script>
   </body>
 </html>

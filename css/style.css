@@ -428,10 +428,9 @@ a:focus {
 .project_section .project_container {
   display: flex;
   gap: 35px; /* Increased gap between logos */
-  overflow-x: hidden; /* Hide the scrollbar */
+  overflow: hidden; /* Hide the scrollbar */
   position: relative;
   padding: 20px 120px; /* Adjust left and right padding */
-  animation: slide-infinite 20s linear infinite; /* Apply animation to container */
 }
 
 .project_section .project_container .box {
@@ -450,14 +449,6 @@ a:focus {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
 
-@keyframes slide-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100%)); /* Move the container to the left */
-  }
-}
 
 
 .expand_section {
