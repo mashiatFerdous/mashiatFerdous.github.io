@@ -436,7 +436,7 @@ a:focus {
 .project_section .project_container .box {
   flex: 0 0 auto; /* Prevent shrinking and set fixed width */
   width: 150px; /* Adjusted width for smaller logos */
-  animation: slide 10s linear infinite; /* Auto-slide animation */
+  animation: slide 20s linear infinite; /* Auto-slide animation */
 }
 
 .project_section .project_container .box img {
@@ -449,15 +449,14 @@ a:focus {
 .project_section .project_container .box img:hover {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
-@keyframes slide {
+@keyframes slide-infinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% - 30px)); /* Slide left continuously */
+    transform: translateX(calc(-100%));
   }
 }
-
 
 
 .expand_section {
