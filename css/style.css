@@ -450,6 +450,10 @@ a:focus {
 .project_section .project_container .box img:hover {
   transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
+.project_section .container {
+  max-width: 1200px; /* Set max-width to avoid stretching */
+  margin: 0 auto; /* Center the container */
+}
 
 
 
