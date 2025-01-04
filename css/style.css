@@ -495,6 +495,7 @@ a:focus {
   gap: 35px; /* Adjusted gap between logos */
   overflow: hidden; /* Hide the scrollbar */
   position: relative;
+  padding: 20px 200px;
   scroll-behavior: smooth;
   white-space: nowrap; /* Ensure items are on a single line */
 }
