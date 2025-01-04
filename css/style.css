@@ -495,11 +495,12 @@ a:focus {
   gap: 30px; /* Space between logos */
   white-space: nowrap;
   padding: 0 20px; /* Add padding to prevent logos from touching the edges */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
 }
 
 .blog_section .logo-slider .box {
   flex: 0 0 auto; /* Prevent shrinking and set fixed width */
-  width: 200px; /* Adjust width of the logo box */
+  width: 150px; /* Adjust width to match project section item size */
 }
 
 .blog_section .logo-slider .box .img-box img {
@@ -515,6 +516,7 @@ a:focus {
 .blog_section .logo-slider .box .detail-box h4 {
   font-weight: bold;
 }
+
 
 
 /* contact section */
