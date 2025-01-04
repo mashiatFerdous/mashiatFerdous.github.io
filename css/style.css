@@ -487,29 +487,29 @@ a:focus {
 
 
 .blog_section .logo-slider-container {
-  overflow: hidden; /* Ensure the overflow is hidden for smooth scrolling */
+  overflow: hidden; /* Hide the scrollbar */
   position: relative;
-  width: 100%; /* Make sure the container width is 100% */
 }
 
 .blog_section .logo-slider {
   display: flex;
   gap: 30px; /* Space between logos */
-  white-space: nowrap;
   scroll-behavior: smooth;
-  flex-wrap: nowrap; /* Prevent items from wrapping */
+  white-space: nowrap;
+  padding: 0 20px; /* Add padding to prevent logos from touching the edges */
 }
 
 .blog_section .logo-slider .box {
-  flex: 0 0 auto; /* Prevent shrinking and maintain width */
+  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
   width: 150px; /* Adjust width to match project section item size */
 }
 
-.blog_section .logo-slider .box .img-box img {
+.blog_section .logo-slider .box img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px; /* Optional: Add border-radius */
 }
+
 
 
 
