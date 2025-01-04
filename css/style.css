@@ -485,37 +485,30 @@ a:focus {
   width: 100%;
 }
 
+
 .blog_section .logo-slider-container {
-  overflow: hidden; /* Hide the scrollbar */
+  overflow: hidden; /* Ensure the overflow is hidden for smooth scrolling */
   position: relative;
+  width: 100%; /* Make sure the container width is 100% */
 }
 
 .blog_section .logo-slider {
   display: flex;
   gap: 30px; /* Space between logos */
   white-space: nowrap;
-  padding: 0 20px; /* Add padding to prevent logos from touching the edges */
   scroll-behavior: smooth;
-  flex-wrap: nowrap; /* Prevent wrapping of items */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
 }
 
 .blog_section .logo-slider .box {
-  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
+  flex: 0 0 auto; /* Prevent shrinking and maintain width */
   width: 150px; /* Adjust width to match project section item size */
 }
 
 .blog_section .logo-slider .box .img-box img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Add border-radius */
-}
-
-.blog_section .logo-slider .box .detail-box {
-  margin-top: 25px;
-}
-
-.blog_section .logo-slider .box .detail-box h4 {
-  font-weight: bold;
+  border-radius: 10px;
 }
 
 

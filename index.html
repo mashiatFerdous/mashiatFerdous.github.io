@@ -514,6 +514,8 @@
         document.getElementById("myNav").style.width = "0%";
       }
 
+
+
 // Project section script
 const projectContainer = document.querySelector('.project_container');
 let projectScrollAmount = 0;
@@ -553,8 +555,12 @@ const clonedLogoItems = Array.from(logoItems).map(item => item.cloneNode(true));
 clonedLogoItems.forEach(item => logoSlider.appendChild(item));
 
 function logoAutoSlide() {
-  logoSlider.scrollBy({ left: 1, behavior: 'smooth' });
-  logoScrollAmount += 1;
+  // Adjust the scroll amount to 3 for smoother motion
+  logoSlider.scrollBy({ left: 3, behavior: 'smooth' });
+  logoScrollAmount += 3;
+
+  // Log to check if it's scrolling
+  console.log(logoSlider.scrollLeft); 
 
   // Reset scroll position when the slider reaches the halfway point (end of the original items)
   if (logoScrollAmount >= logoSlider.scrollWidth / 2) {
@@ -570,7 +576,6 @@ logoSlider.addEventListener('mouseover', () => clearInterval(logoSlideInterval))
 logoSlider.addEventListener('mouseout', () => {
   logoSlideInterval = setInterval(logoAutoSlide, 20);
 });
-
 
     </script>
   </body>
