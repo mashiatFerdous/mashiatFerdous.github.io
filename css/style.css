@@ -486,28 +486,29 @@ a:focus {
 }
 
 
-.blog_section .logo-slider-container {
-  overflow: hidden; /* Hide the scrollbar */
-  position: relative;
-}
-
 .blog_section .logo-slider {
   display: flex;
-  gap: 30px; /* Space between logos */
+  gap: 35px; /* Adjusted gap between logos */
+  overflow: hidden; /* Hide the scrollbar */
+  position: relative;
   scroll-behavior: smooth;
-  white-space: nowrap;
-  padding: 0 20px; /* Add padding to prevent logos from touching the edges */
+  white-space: nowrap; /* Ensure items are on a single line */
 }
 
 .blog_section .logo-slider .box {
-  flex: 0 0 auto; /* Prevent shrinking and set fixed width */
-  width: 150px; /* Adjust width to match project section item size */
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 150px; /* Adjusted width for smaller logos */
 }
 
 .blog_section .logo-slider .box img {
   width: 100%;
-  height: auto;
-  border-radius: 10px; /* Optional: Add border-radius */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners */
+  transition: transform 0.3s ease;
+}
+
+.blog_section .logo-slider .box img:hover {
+  transform: scale(1.05); /* Optional: Zoom effect on hover */
 }
 
 
