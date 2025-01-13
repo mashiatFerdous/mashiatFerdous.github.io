@@ -559,6 +559,12 @@ document.addEventListener('contextmenu', function (event) {
     //alert('');
   });
 
+// Optional: Disable long press on mobile devices
+document.addEventListener('touchstart', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+});
 
     </script>
   </body>
