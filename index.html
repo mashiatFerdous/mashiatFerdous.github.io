@@ -553,6 +553,11 @@ logoSlider.addEventListener('mouseover', () => clearInterval(logoSlideInterval))
 logoSlider.addEventListener('mouseout', () => {
   logoSlideInterval = setInterval(logoAutoSlide, 20);
 });
+// disabling the context menu
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+    alert('Right-click is disabled on this website.');
+  });
 
 
     </script>
