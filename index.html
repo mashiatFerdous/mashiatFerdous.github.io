@@ -552,12 +552,12 @@ function logoAutoSlide() {
   }
 }
 
-let logoSlideInterval = setInterval(logoAutoSlide, 5); // Adjust speed
+let logoSlideInterval = setInterval(logoAutoSlide, 1); // Adjust speed
 
 // Pause the auto-slide when hovered
 logoSlider.addEventListener('mouseover', () => clearInterval(logoSlideInterval));
 logoSlider.addEventListener('mouseout', () => {
-  logoSlideInterval = setInterval(logoAutoSlide, 5);
+  logoSlideInterval = setInterval(logoAutoSlide, 1);
 });
 // disabling the context menu
 document.addEventListener('contextmenu', function (event) {
