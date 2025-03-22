@@ -557,7 +557,7 @@ let logoSlideInterval = setInterval(logoAutoSlide, 30); // Adjust speed
 // Pause the auto-slide when hovered
 logoSlider.addEventListener('mouseover', () => clearInterval(logoSlideInterval));
 logoSlider.addEventListener('mouseout', () => {
-  logoSlideInterval = setInterval(logoAutoSlide, 20);
+  logoSlideInterval = setInterval(logoAutoSlide, 30);
 });
 // disabling the context menu
 document.addEventListener('contextmenu', function (event) {
